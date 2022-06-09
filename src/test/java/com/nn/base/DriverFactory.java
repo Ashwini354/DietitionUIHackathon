@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.Scenario;
 
 import org.openqa.selenium.OutputType;
-import com.nn.config.PropertiesConfguration;
+import com.nn.config.PropertiesConfiguration;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -27,7 +27,7 @@ public class DriverFactory {
 	public static ThreadLocal<WebDriver> tdriver = new ThreadLocal<WebDriver>();
 
 	static {
-		prop = PropertiesConfguration.loadProperties();
+		prop = PropertiesConfiguration.loadProperties();
 	}
 
 	@Before(order = 0)
@@ -41,7 +41,7 @@ public class DriverFactory {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
-//		driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		// driver.get(prop.getProperty("url"));
 		tdriver.set(driver);

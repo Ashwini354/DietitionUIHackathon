@@ -6,7 +6,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = {
-		"/Users/ashwiniramamurthy/eclipse-workspace/DietitionCumcumber/src/test/resources/feature" }, glue = {
+		"/Users/ashwiniramamurthy/eclipse-workspace/DietitionUIHackathon/src/test/resources/feature" }, glue = {
 				"com.nn.stepdefinition", "com.nn.base" }, monochrome = true, plugin = {
 						"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 

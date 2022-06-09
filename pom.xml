@@ -6,11 +6,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.nn</groupId>
-	<artifactId>DietitionCumcumber</artifactId>
+	<artifactId>DietitionUIHackathon</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>DietitionCumcumber</name>
+	<name>DietitionUIHackathon</name>
 	<url>http://www.example.com</url>
 
 	<properties>
@@ -37,11 +37,7 @@
 			<version>7.3.0</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>io.qameta.allure</groupId>
-			<artifactId>allure-testng</artifactId>
-			<version>2.17.3</version>
-		</dependency>
+		
 
 
 
