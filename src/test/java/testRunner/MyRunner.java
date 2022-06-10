@@ -1,13 +1,14 @@
-package com.nn.runner;
+package testRunner;
 
 import org.junit.runner.RunWith;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = {
-		"/Users/ashwiniramamurthy/eclipse-workspace/DietitionUIHackathon/src/test/resources/feature" }, glue = {
-				"com.nn.stepdefinition", "com.nn.base" }, monochrome = true, plugin = {
+@CucumberOptions(features =
+		"classpath:/Features" , glue = {
+				"stepDefinitions", "base" }, monochrome = true, plugin = {
 						"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 
 }

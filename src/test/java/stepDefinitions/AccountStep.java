@@ -1,18 +1,17 @@
-package com.nn.stepdefinition;
+package stepDefinitions;
 
 import java.util.List;
 import java.util.Map;
 
 import org.junit.Assert;
 
-import com.nn.base.DriverFactory;
-import com.nn.pages.AccountPage;
-import com.nn.pages.SignIn;
-
+import base.DriverFactory;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.AccountPage;
+import pages.SignIn;
 
 public class AccountStep {
 	private SignIn signin = new SignIn(DriverFactory.getDriver());

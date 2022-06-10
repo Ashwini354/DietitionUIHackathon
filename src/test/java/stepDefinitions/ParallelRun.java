@@ -1,4 +1,4 @@
-package com.nn.stepdefinition;
+package stepDefinitions;
 
 
 import org.testng.annotations.DataProvider;
@@ -8,8 +8,8 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 
-@CucumberOptions(features = {
-"/Users/ashwiniramamurthy/eclipse-workspace/DietitionUIHackathon/src/test/resources/feature" }, glue = {
+@CucumberOptions(features = "classpath:/feature",
+ 					glue = {
 		"com.nn.stepdefinition", "com.nn.base" }, monochrome = true, plugin = {
 				"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","timeline:test-output-thread/","rerun:target/failedrerun.txt"})
 

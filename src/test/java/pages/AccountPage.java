@@ -1,10 +1,10 @@
-package com.nn.pages;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.nn.utils.ApplicationUtils;
+import utilities.ApplicationUtils;
 
 public class AccountPage extends ApplicationUtils{
 
