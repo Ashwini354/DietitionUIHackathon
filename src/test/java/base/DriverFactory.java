@@ -32,18 +32,21 @@ public class DriverFactory {
 
 	@Before(order = 0)
 	public void Launch() {
-		System.out.println("Before Calss is executing");
+		System.out.println("Initializing the driver from driver factory");
 		String browser = prop.getProperty("browser");
-		if (browser.equalsIgnoreCase("chrome")) {
+		
+		if (browser.equalsIgnoreCase("chrome")) 
+		{
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		} else if (browser.equalsIgnoreCase("firefox")) {
+		}
+		 else if (browser.equalsIgnoreCase("firefox")) 
+		 {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		// driver.get(prop.getProperty("url"));
 		tdriver.set(driver);
 
 	}

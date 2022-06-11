@@ -5,7 +5,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.nn</groupId>
+	<groupId>DietitionUIHackathon</groupId>
 	<artifactId>DietitionUIHackathon</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -37,17 +37,14 @@
 			<version>7.3.0</version>
 			<scope>test</scope>
 		</dependency>
-		
 
-
-
-		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 		<!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber6-adapter -->
 		<dependency>
 			<groupId>tech.grasshopper</groupId>
 			<artifactId>extentreports-cucumber7-adapter</artifactId>
 			<version>1.5.1</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->		
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
@@ -77,16 +74,12 @@
 			<version>4.13.1</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
 			<version>7.1.0</version>
 			<scope>test</scope>
 		</dependency>
-
-
-
 
 	</dependencies>
 
@@ -108,6 +101,7 @@
 				<version>2.22.2</version>
 				<configuration>
 					<includes>
+<!-- UNCOMMENT BELOW LINE - To execute tests in paralell along with rerunning the failed test cases -->
 						<include>**/ParallelRun.java</include>
 					</includes>
 					<parallel>methods</parallel>
