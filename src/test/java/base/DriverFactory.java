@@ -7,7 +7,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import config.PropertiesConfiguration;
@@ -38,12 +41,20 @@ public class DriverFactory {
 		if (browser.equalsIgnoreCase("chrome")) 
 		{
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			ChromeOptions chromeOptions = new ChromeOptions();
+			//Headless Browser
+			chromeOptions.addArguments("--headless");
+			driver = new ChromeDriver(chromeOptions);
 		}
 		 else if (browser.equalsIgnoreCase("firefox")) 
 		 {
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			FirefoxBinary firefoxBinary = new FirefoxBinary();
+			FirefoxOptions options = new FirefoxOptions();
+			//Headless Browser
+			options.setBinary(firefoxBinary);
+			options.setHeadless(true);
+			driver = new FirefoxDriver(options);
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -65,6 +76,7 @@ public class DriverFactory {
 		driver.quit();
 	}
 
+	//***** Uncomment below code for taking screenshot of Failed Test cases
 	@After(order = 2)
 	public void tearDown(Scenario scenario) {
 		if (scenario.isFailed()) {

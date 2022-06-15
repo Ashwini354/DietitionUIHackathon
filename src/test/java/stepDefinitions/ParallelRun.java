@@ -13,11 +13,11 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
  				 glue = {"stepDefinitions", "base" },
  				 monochrome = true, 
  				 plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","timeline:test-output-thread/","rerun:target/failedrerun.txt"}
-				)
+					)
 
 
 public class ParallelRun extends AbstractTestNGCucumberTests{
-				
+			
 	@DataProvider(parallel=true)
 	public Object[][] scenario(){
 		return super.scenarios();

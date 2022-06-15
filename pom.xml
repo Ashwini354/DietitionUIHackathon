@@ -102,11 +102,11 @@
 				<configuration>
 					<includes>
 <!-- UNCOMMENT BELOW LINE - To execute tests in paralell along with rerunning the failed test cases -->
-						<include>**/ParallelRun.java</include>
+						<include>ParallelRun.java</include>
 					</includes>
 					<parallel>methods</parallel>
 					<threadCount>4</threadCount>
-					<useUnlimitedThreads>false</useUnlimitedThreads>
+					<useUnlimitedThreads>true</useUnlimitedThreads>
 				</configuration>
 			</plugin>
 		
