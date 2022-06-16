@@ -1,4 +1,0 @@
-$(document).ready(function() {
-CucumberHTML.timelineItems.pushArray([{"id":"af72ee13-5a2c-4c38-b90d-0d6418851dbd","feature":"Register Page","scenario":"Validating the Sign Up button for the option \"Sign Up form\" on  Register page.","start":1654946852247,"group":1,"content":"","tags":"","end":1654946855281,"className":"failed"},{"id":"49ef95a6-8bcf-402c-8655-9ce353cfcb6c","feature":"Register Page","scenario":"Validating the Sign Up form heading","start":1654946848515,"group":1,"content":"","tags":"","end":1654946852222,"className":"failed"}]);
-CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[main,5,main]"}]);
-});
