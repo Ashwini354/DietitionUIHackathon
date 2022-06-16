@@ -6,21 +6,22 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.DieticianHome;
+import pages.SigninPage;
 
 public class DieticianHomeSteps {
 
 	
 private DieticianHome dieticianHomepage= new DieticianHome(DriverFactory.getDriver());
-private SignInPage signinpage = new SignInPage(DriverFactory.getDriver());
+private SigninPage signinpage = new SigninPage(DriverFactory.getDriver());
 
-	@Given("User is on the Dietician website")
-	public void user_is_on_the_dietician_website() {
-		DriverFactory.getDriver().get("http://www.xyzdietician.com");
-	}
+//	@Given("User is on the Dietician website")
+//	public void user_is_on_the_dietician_website() {
+//		DriverFactory.getDriver().get("http://www.xyzdietician.com");
+//	}
 	
 	@When("User logged in successfully to the Dietician website")
 	public void user_logged_in_successfully_to_the_dietician_website() {
-		signinpage.SignIn();
+		signinpage.SignIn("admin","password");
 	}
 	
 	@Then("User can see the Home button on header menu")

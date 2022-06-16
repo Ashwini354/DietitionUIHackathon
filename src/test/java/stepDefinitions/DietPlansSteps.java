@@ -8,6 +8,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.DietPlansPage;
+import pages.DieticianHome;
+import pages.HomePage;
+import pages.SigninPage;
 import pages.ViewPdfPage;
 
 

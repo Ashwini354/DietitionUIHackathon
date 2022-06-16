@@ -93,7 +93,7 @@ public class ApplicationUtils {
 		driver.close();
 	}
 
-	public static String getTitleOfThePage() {
+	public String getTitleOfThePage() {
 		return driver.getTitle();
 	}
 

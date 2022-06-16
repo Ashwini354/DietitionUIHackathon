@@ -7,7 +7,9 @@ import base.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.HomePage;
 import pages.ListofScreensPage;
+import pages.SigninPage;
 
 public class ListofScreensSteps {
 	private WebDriver driver = DriverFactory.getDriver();
@@ -18,10 +20,10 @@ public class ListofScreensSteps {
 	private static String[] titleOfPagePublic = new String[9];
 	private static String[] titleOfPageDietician = new String[6];
 	
-	@When("User is on Dietician website")
-	public void user_is_on_dietician_website() {
-		driver.get(url);;
-	}
+//	@When("User is on Dietician website")
+//	public void user_is_on_dietician_website() {
+//		driver.get(url);;
+//	}
 	
 	@Given("User is signed into Dietician website")
 	public void user_is_signed_into_dietician_website() {

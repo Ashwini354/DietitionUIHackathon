@@ -7,9 +7,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.MyPatientPage;
-import pages.SignIn;
+import pages.SigninPage;
+
 
 public class MyPatientStep {
+	private SigninPage signinpage = new SigninPage(DriverFactory.getDriver());
 	private MyPatientPage myPatientPage =new MyPatientPage(DriverFactory.getDriver());
 	private String title;
 	private String search;
@@ -19,7 +21,7 @@ public class MyPatientStep {
 public void user_is_on_any_page_after_login() {
 	
 	myPatientPage.getTitleOfThePage();
-	
+	signinpage.SignIn("admin","password");
   
 }
 

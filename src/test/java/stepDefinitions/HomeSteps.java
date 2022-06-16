@@ -139,14 +139,14 @@ private HomePage homepage= new HomePage(DriverFactory.getDriver());
 		}
     }
 
-    @Then("User is directed to Register page")
-    public void user_is_directed_to_register_page() {
-
-		String headingText = "Sign Up Form";
-		String expectedHeading = homepage.headingRegisterMenu();
-		Assert.assertEquals(headingText, expectedHeading);
-
-    }
+//    @Then("User is directed to Register page")
+//    public void user_is_directed_to_register_page() {
+//
+//		String headingText = "Sign Up Form";
+//		String expectedHeading = homepage.headingRegisterMenu();
+//		Assert.assertEquals(headingText, expectedHeading);
+//
+//    }
     
     //Home-Secondary Menu Bar
     

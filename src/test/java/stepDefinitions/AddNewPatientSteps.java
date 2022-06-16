@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.AddNewPatient;
+import pages.SigninPage;
 
 public class AddNewPatientSteps {
 	
@@ -13,7 +14,7 @@ private static String[] errMsg = new String[10];
 
 
 private AddNewPatient addnewpatientpage= new AddNewPatient(DriverFactory.getDriver());
-private SignInPage signinpage = new SignInPage(DriverFactory.getDriver());
+private SigninPage signinpage = new SigninPage(DriverFactory.getDriver());
 
 
 	@Given("User is on the Add New Patient Page")
@@ -23,7 +24,7 @@ private SignInPage signinpage = new SignInPage(DriverFactory.getDriver());
 	
 	@When("User wants to enter New Patient details")
 	public void user_wants_to_enter_new_patient_details() {
-		signinpage.SignIn();
+		signinpage.SignIn("admin","password");
 	}
 	
 	@Then("Patient Data From is visible")
