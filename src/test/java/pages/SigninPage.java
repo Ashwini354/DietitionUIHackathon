@@ -35,8 +35,16 @@ public class SigninPage extends ApplicationUtils{
 	WebElement btnLogIn;
     @FindBy(name="Email")
     WebElement txt_email;
-    @FindBy(id="Pwd")
-    WebElement txt_Pwd;
+    @FindBy(id="SignUpHere")
+    WebElement signuphere;
+    
+    @FindBy(xpath = "//input[@id='Facebook']")
+   	WebElement facebook;
+       @FindBy(name="Google")
+       WebElement google;
+       @FindBy(id="Pwd")
+       WebElement txt_Pwd;
+    
     
 	
 	
@@ -82,6 +90,20 @@ public class SigninPage extends ApplicationUtils{
 			signinHome.click();
 		
 }
+	 
+
+		public void faceBookclick() {
+			facebook.click();
+			
+		}
+		public void googleClick() {
+			google.click();
+
+		}
+		public void SignUPHereClick() {
+			signuphere.click();
+
+		}
 }
     
 	

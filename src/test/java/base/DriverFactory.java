@@ -77,15 +77,15 @@ public class DriverFactory {
 	}
 
 	//***** Uncomment below code for taking screenshot of Failed Test cases
-	@After(order = 2)
-	public void tearDown(Scenario scenario) {
-		if (scenario.isFailed()) {
-			// take screenshot:
-			String screenshotName = scenario.getName().replaceAll(" ", "_");
-			byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-			scenario.attach(sourcePath, "image/png", screenshotName);
-
-		}
-	}
+//	@After(order = 2)
+//	public void tearDown(Scenario scenario) {
+//		if (scenario.isFailed()) {
+//			// take screenshot:
+//			String screenshotName = scenario.getName().replaceAll(" ", "_");
+//			byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+//			scenario.attach(sourcePath, "image/png", screenshotName);
+//
+//		}
+//	}
 
 }

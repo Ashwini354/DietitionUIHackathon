@@ -10,7 +10,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "classpath:/Features" , 
+		features = "classpath:/Features/Signin.feature" , 
 		glue = {"stepDefinitions", "base" }, 
 		monochrome = true, 
 		plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
